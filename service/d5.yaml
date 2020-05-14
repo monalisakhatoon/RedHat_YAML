@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1
+  labels: 
+    dev: app
+spec:
+  selector:
+    matchLabels:
+      dev: app
+  replicas: 6
+  template:
+    metadata:
+      labels:
+        dev: app
+    spec:
+      containers:
+      - name: a1
+        image: docker.io/shivaagn/angular-app

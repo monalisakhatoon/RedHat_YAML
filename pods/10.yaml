@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginxpod
+ labels:
+  app: pro
+spec:
+ containers:
+ - name: nginx
+   image: docker.io/monalisakhatoon123/mynginx:latest

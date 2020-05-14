@@ -1,0 +1,15 @@
+appVersion: v1
+kind: Service
+metadata:
+  name: Shivansh
+  labels:
+    dish: samosa
+spec:
+  type: NodePort
+  ports:
+  - nodePort: 31000
+    port: 31000
+    targetPort: 8080
+    protocol: "TCP"
+  selector:
+    dish: samosa
